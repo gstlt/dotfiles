@@ -30,4 +30,5 @@ fi
 
 export EDITOR=vim
 export GIT_EDITOR=vim
+export LESS='-R'
 
