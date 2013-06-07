@@ -1,8 +1,10 @@
 # tools aliases
-alias mbuild='~/projects_enovation/bin/get_blender_build.sh'
-alias ticket='~/projects_enovation/bin/ticket.php'
+alias mbuild='~/local/bin/get_blender_build.sh'
+alias ticket='~/local/bin/ticket.php'
+alias composer="php ~/local/bin/composer.phar"
 
 # ls aliases
 alias ll='ls -lah --color'
 alias l='ls -lh --color'
 alias ls='ls --color'
+
