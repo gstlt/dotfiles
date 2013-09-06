@@ -57,3 +57,5 @@
 
 [core]
     excludesfile = ~/.gitignore
+[push]
+	default = current
