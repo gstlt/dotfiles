@@ -1,10 +1,9 @@
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra,hosts}; do
+for file in ~/.{aliases,functions,hosts}; do
 if [[ -r "$file" ]]; then
 source "$file"
     fi
 done
 unset file
-
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
