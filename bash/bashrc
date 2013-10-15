@@ -1,5 +1,5 @@
 # Hosts autocompletion
-export HOSTFILE=~/.hosts
+export HOSTFILE=/etc/hosts
 
 for file in ~/.{aliases,functions}; do
 if [[ -r "$file" ]]; then
