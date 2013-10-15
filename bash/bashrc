@@ -1,4 +1,4 @@
-# Hosts:
+# Hosts autocompletion
 export HOSTFILE=~/.hosts
 
 for file in ~/.{aliases,functions}; do
