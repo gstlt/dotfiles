@@ -1,4 +1,7 @@
-for file in ~/.{aliases,functions,hosts}; do
+# Hosts:
+export HOSTFILE=~/.hosts
+
+for file in ~/.{aliases,functions}; do
 if [[ -r "$file" ]]; then
 source "$file"
     fi
