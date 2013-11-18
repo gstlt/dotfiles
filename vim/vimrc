@@ -1,0 +1,10 @@
+" Convert tabs to 4 spaces
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+
+" Color scheme
+syntax enable
+set background=dark
+colorscheme solarized
+
