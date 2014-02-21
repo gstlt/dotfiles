@@ -1,5 +1,7 @@
 # Hosts autocompletion
 export HOSTFILE=/etc/hosts
+# Grep colors
+export GREP_OPTIONS='--color=auto'
 
 for file in ~/.{aliases,functions}; do
 if [[ -r "$file" ]]; then
