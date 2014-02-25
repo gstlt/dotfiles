@@ -10,3 +10,6 @@ alias plint='for file in `find . -name "*.pp" -type f`; do echo "---------------
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'
 # Sublime Text
 alias sublime='~/local/sublime/sublime_text'
+# Speed test!!1 (https://alias.sh/bash-speed-test)
+alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
+
