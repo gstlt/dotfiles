@@ -1,9 +1,49 @@
-_fab_completion()
+_hosts_completion_ssh()
 {
-    COMPREPLY=()
-    local cur tasks
-    tasks=$(fab --shortlist 2>/dev/null)
-    _get_comp_words_by_ref cur
-    COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
+    COMREPLY=()
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+
+    if [[ ${cur} =~ "@" ]]; then
+        local tail="${cur#*@}"
+        local prefix="${cur%"$tail"}"
+        local hosts=$(cat ~/.hosts 2>/dev/null | awk -v prefix="${prefix}" '{print prefix $0;}')
+    else
+        local hosts=$(cat ~/.hosts 2>/dev/null)
+    fi
+
+    COMPREPLY=( $(compgen -W "${hosts}" -- ${cur}) )
 }
-complete -F _fab_completion fab
+complete -F _hosts_completion_ssh ssh
+
+_completion_fabric()
+{
+    COMREPLY=()
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    local prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    case "${prev}" in
+        'fab')
+            local cur tasks
+            tasks=$(fab --shortlist 2>/dev/null)
+            _get_comp_words_by_ref cur
+            COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
+            return 0
+            ;;
+        '-H')
+            local hosts=$(cat ~/.hosts 2>/dev/null)
+            COMPREPLY=( $(compgen -W "${hosts}" -- ${cur}) )
+            return 0
+            ;;
+        '-R')
+            local roles=$(cat ~/.roles 2>/dev/null)
+            COMPREPLY=( $(compgen -W "${roles}" -- ${cur}) )
+            return 0
+            ;;
+        *)
+            ;;
+    esac
+
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+    return 0
+}
+complete -F _completion_fabric fab
