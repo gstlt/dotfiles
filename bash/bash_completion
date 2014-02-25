@@ -22,7 +22,7 @@ _completion_fabric()
     local prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     case "${prev}" in
-        'fab')
+        'fab'|'-d')
             local cur tasks
             tasks=$(fab --shortlist 2>/dev/null)
             _get_comp_words_by_ref cur
