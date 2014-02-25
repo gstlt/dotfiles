@@ -22,13 +22,6 @@ _completion_fabric()
     local prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     case "${prev}" in
-        'fab'|'-d')
-            local cur tasks
-            tasks=$(fab --shortlist 2>/dev/null)
-            _get_comp_words_by_ref cur
-            COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
-            return 0
-            ;;
         '-H')
             local hosts=$(cat ~/.hosts 2>/dev/null)
             COMPREPLY=( $(compgen -W "${hosts}" -- ${cur}) )
@@ -40,6 +33,11 @@ _completion_fabric()
             return 0
             ;;
         *)
+            local cur tasks
+            tasks=$(fab --shortlist 2>/dev/null)
+            _get_comp_words_by_ref cur
+            COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
+            return 0
             ;;
     esac
 
@@ -47,3 +45,4 @@ _completion_fabric()
     return 0
 }
 complete -F _completion_fabric fab
+
