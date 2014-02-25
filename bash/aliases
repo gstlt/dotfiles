@@ -2,6 +2,11 @@
 alias ll='ls -lah --color'
 alias l='ls -lh --color'
 alias ls='ls --color'
-
+# Nicer mount view
 alias mount='mount | column -t'
+# Exec puppet-lint for all files in current directory and deeper
 alias plint='for file in `find . -name "*.pp" -type f`; do echo "------------------------------ $file"; puppet-lint $file; done'
+# How often I use which command
+alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'
+# Sublime Text
+alias sublime='~/local/sublime/sublime_text'
