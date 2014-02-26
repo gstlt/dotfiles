@@ -39,3 +39,5 @@ function parse_git_branch {
 # added parse_git_branch into PS1 ...
 PS1='\[\033[01;32m\]\u\[\033[01;34m\]\w\[\033[31m\]$(parse_git_branch)\[\033[01;34m\]$\[\033[00m\] '
 
+# mkdir and cd to a new dir
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
