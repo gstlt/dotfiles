@@ -14,5 +14,11 @@ alias sublime='~/local/sublime/sublime_text'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 # ssh be verbose
 alias ssh='ssh -v'
-# pip upgrade all packages
+# git review master
+alias rev='git review master'
+# pip upgrade all
 alias pip-upgrade='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs sudo pip install -U'
+# what's my ip
+alias whatismyip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+# terminator window geometry
+alias terminator='terminator --geometry=1024x600'
