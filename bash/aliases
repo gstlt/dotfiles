@@ -8,8 +8,6 @@ alias mount='mount | column -t'
 alias plint='for file in `find . -name "*.pp" -type f`; do echo "------------------------------ $file"; puppet-lint $file; done'
 # How often I use which command
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'
-# Sublime Text
-alias sublime='~/local/sublime/sublime_text'
 # Speed test!!1 (https://alias.sh/bash-speed-test)
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 # ssh be verbose
@@ -20,5 +18,6 @@ alias rev='git review master'
 alias pip-upgrade='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs sudo pip install -U'
 # what's my ip
 alias whatismyip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
-# terminator window geometry
-alias terminator='terminator --geometry=1024x600'
+# how long the process has been running?
+alias psrun='ps -o etime= -p'
+
