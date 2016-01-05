@@ -1,11 +1,7 @@
-# Hosts autocompletion
-export HOSTFILE=/etc/hosts
-# Grep colors
-export GREP_OPTIONS='--color=auto'
-
+# Include aliases and functions
 for file in ~/.{aliases,functions}; do
-if [[ -r "$file" ]]; then
-source "$file"
+    if [[ -r "$file" ]]; then
+        source "$file"
     fi
 done
 unset file
