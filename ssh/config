@@ -1,3 +1,21 @@
-VisualHostKey=yes 
+# Show keys ascii graphics
+VisualHostKey=yes
 
+# Offer only one Identity at a time
+Host *
+  IdentitiesOnly yes
+
+# Automatically add all used keys to agent
+AddKeysToAgent yes
+
+## Samples
+#Host some-host-alias
+#    HostName real-name.tld
+#    IdentityFile /home/user/.ssh/blah/id_rsa
+#    User some.username
+#
+#Host some-other-host-alias
+#    HostName 1.2.3.*
+#    PubkeyAuthentication no
+#    User root
 
