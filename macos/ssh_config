@@ -1,0 +1,13 @@
+VisualHostKey=yes
+
+# Make macos ssh agent remember unlocked keys
+AddKeysToAgent yes
+
+# Offer only one Identity at a time
+Host *
+  IdentitiesOnly yes
+
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/blah_blah_key (yep, you supposed to change this)
+
