@@ -1,4 +1,4 @@
-TERRAFORM_VERSION = 0.8.8
+TERRAFORM_VERSION = 0.9.1
 PACKER_VERSION = 0.12.3
 
 # Operating system: darwin, freebsd, linux, openbsd, solaris, windows
