@@ -67,3 +67,6 @@ rbenv() {
   esac
 }
 
+# Custom binaries
+PATH=$PATH:${HOME}/local/bin
+
