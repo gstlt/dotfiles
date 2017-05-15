@@ -17,4 +17,5 @@ alias whatismyip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 
 # More secure ssh key!
 # See: http://blog.patshead.com/2013/09/generating-new-more-secure-ssh-keys.html
-alias ssh-keygen='ssh-keygen -b 4096 -o -a 500'
+#alias ssh-keygen='ssh-keygen -b 4096 -o -a 500'
+alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
