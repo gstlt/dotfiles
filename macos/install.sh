@@ -12,7 +12,6 @@ brew install git
 brew install bash-completion@2
 brew install python
 brew install python3
-brew install openvpn
 brew install terraform
 brew install packer
 brew install awscli
@@ -45,6 +44,7 @@ brew cask install dropbox
 brew cask install hipchat
 brew cask install slack
 brew cask install skype
+brew cask install tunnelblick
 
 brew cask install vagrant
 brew install vagrant-completion
