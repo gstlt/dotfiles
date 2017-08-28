@@ -18,4 +18,10 @@ AddKeysToAgent yes
 #    HostName 1.2.3.*
 #    PubkeyAuthentication no
 #    User root
-
+#
+#Host some-host-behind-jumpserver
+#    HostName somehost.local
+#    User admin
+#    IdentityFile ~/.ssh/my_ssh_key
+#    ProxyCommand ssh -i ~/.ssh/my_ssh_key admin@1.2.3.4 -W %h:%p
+#    ForwardAgent yes
