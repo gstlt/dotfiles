@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-#!/usr/bin/env python
+#!/usr/bin/env python3
 ''' This little thing is downloading all recent dotfiles and updates if necesarry '''
 
 import os

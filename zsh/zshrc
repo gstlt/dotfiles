@@ -1,0 +1,15 @@
+
+# Setup brew zsh completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Setup starship
+eval "$(starship init zsh)"
+
+source ~/local/zsh/aliases
+source ~/local/zsh/zshrc
+

@@ -1,0 +1,7 @@
+setopt autocd
+
+# Local binaries as a last path
+export PATH=/usr/local/sbin:/usr/local/opt/curl/bin:/usr/local/opt/openjdk/bin:$PATH:~/local/bin
+
+# console colors for ls command
+export LSCOLORS="gxfxcxdxbxegedabagacad"

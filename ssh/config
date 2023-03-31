@@ -3,25 +3,11 @@ VisualHostKey=yes
 
 # Offer only one Identity at a time
 Host *
+  ForwardAgent yes
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/gitmaster
 
 # Automatically add all used keys to agent
 AddKeysToAgent yes
 
-## Samples
-#Host some-host-alias
-#    HostName real-name.tld
-#    IdentityFile /home/user/.ssh/blah/id_rsa
-#    User some.username
-#
-#Host some-other-host-alias
-#    HostName 1.2.3.*
-#    PubkeyAuthentication no
-#    User root
-#
-#Host some-host-behind-jumpserver
-#    HostName somehost.local
-#    User admin
-#    IdentityFile ~/.ssh/my_ssh_key
-#    ProxyCommand ssh -i ~/.ssh/my_ssh_key admin@1.2.3.4 -W %h:%p
-#    ForwardAgent yes
+

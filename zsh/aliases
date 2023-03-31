@@ -1,0 +1,24 @@
+# ls aliases
+alias ll='ls -lah -G'
+alias l='ls -lh -G'
+alias ls='ls -G'
+
+# Nicer mount view
+alias mount='mount | column -t'
+
+# How often I use which command
+alias freq='cut -f1 -d" " ~/.zsh_history | sort | uniq -c | sort -nr | head -n 30'
+
+# Speed test!!1 (https://alias.sh/bash-speed-test)
+alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
+# what's my ip
+alias whatismyip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+
+# ssh keygen options
+alias ssh-keygen-aws='ssh-keygen -b 4096 -o -a 500 -t rsa'
+alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
+
+# dircolors
+alias dircolors='gdircolors'
+
+alias tf="terraform"
